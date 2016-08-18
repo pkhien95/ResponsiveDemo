@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../css/demo6.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<!--Nav bar-->
+	<ul class="topnav" id="myTopnav">
+	  <li class="toggle">
+	    <a class="icon" href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+	  </li>
+	  <li class="brand">
+	  	<h1>Responsive Demo</h1>
+	  </li>
+	  <li><a class="active demo1" href="demo1.html">Demo 1</a></li>
+	  <li><a class="demo2" href="demo2.html">Demo 2</a></li>
+	  <li><a class="demo3" href="demo3.html">Demo 3</a></li>
+	  <li><a class="demo4" href="demo4.html">Demo 4</a></li>
+	  <li><a class="demo5" href="demo5.html">Demo 5</a></li>
+	  <li><a class="demo6" href="demo6.html">Demo 6</a></li>
+	</ul>
+	<!--End Nav bar-->
+
+	<!--Content-->
+	<div class="content">
+		<div class="title">
+			<h1>Responsive Image</h1>
+		</div>
+
+		<picture>
+			<source media="print" srcset="landscape_print.jpg">
+
+			<source media="(max-width: 480px)"
+			srcset="../images/landscape_small.jpg">
+
+			<source media="(max-width: 640px)"
+			srcset="../images/landscape_medium.jpg">
+
+			<source media="(max-width: 1024px)"
+			srcset="../images/landscape_large.jpg">
+			
+			<img src="../images/landscape_large.jpg"
+			alt="Nymphenburg Castle in Munich during sunset">
+		</picture>
+
+		<p>Rotate/resize the window the image change. Large images incur unnecessary download and processing time, slowing the experience for users. To solve this problem, the picture element allows you to provide multiple sources of the same image at different resolutions so the browser can pick the image of the correct size based on the viewport size.</p>
+	</div>
+	<!--End content-->
+
+<script type="text/javascript" src="../js/controller.js"></script>
+</body>
+</html>

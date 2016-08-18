@@ -1,0 +1,71 @@
+.content
+{
+	padding: 20px 20px 20px 20px;
+}
+
+article
+{
+    background-color: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	color: #ccc;
+	padding: 10px;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+@media (orientation: landscape)
+{
+	.orientation:after
+	{
+		content: "landscape";
+	}
+}
+
+@media (orientation: portrait)
+{
+	.orientation:after
+	{
+		content: "portrait";
+	}
+}
+
+@media (max-width: 500px) 
+{
+    h1 
+    {
+      color: red;
+    }
+
+    .desc:after 
+    {
+      content:" In fact, it's between 0px and 500px wide.";
+    }
+}
+
+@media (min-width: 501px) and (max-width: 639px) 
+{
+    h1 
+    {
+      color: yellow;
+    }
+
+    .desc:after 
+    {
+      content:" In fact, it's between 501px and 639px wide.";
+    }
+}
+
+@media (min-width: 640px) 
+{
+    h1 
+    {
+      color: green;
+    }
+
+    .desc:after 
+    {
+      content:" This browser window is at least 640px wide!";
+    }
+}
+
